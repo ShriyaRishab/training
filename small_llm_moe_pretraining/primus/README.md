@@ -98,7 +98,7 @@ After completion, logs will be available under `$LOGDIR`.
 
 ## Target loss
 
-TBD
+3.34
 
 ## Quality Metric
 
@@ -110,7 +110,7 @@ Evaluation every **12,288 samples** (768 iterations with GBS=16)
 
 ## Evaluation Thoroughness
 
-We evaluate using **1024 samples** from the validation dataset.
+We evaluate using the first **1,024 samples** from the validation dataset.
 
 # 5. Model Architecture
 
