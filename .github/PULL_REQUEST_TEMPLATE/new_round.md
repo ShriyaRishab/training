@@ -10,7 +10,7 @@ Prior round: v[<!-- e.g. 6.0 -->]
 Submission deadline: <!-- date -->
 Tracking issue: #<!-- issue number -->
 
-Use this checklist when the Training WG adopts a new round. For **brand-new benchmarks** added in the same round, also complete the [New Benchmark](new_benchmark.md) checklist.
+Use this checklist when the Training WG adopts a new round. For brand-new benchmarks added in the same round, also apply the `new-benchmark` label so that checklist is appended.
 
 Key references:
 
@@ -19,29 +19,23 @@ Key references:
 - [Compatibility table (Training)](https://github.com/mlcommons/policies/blob/master/MLPerf_Compatibility_Table.adoc#training)
 - [MLPerf Training benchmarks page](https://mlcommons.org/benchmarks/training/)
 
----
-
-### 1. Confirm round scope with the Training WG
+### Confirm round scope with the Training WG
 
 - [ ] Finalize benchmark list for v[X.Y]: carrying forward, new, and retired benchmarks
 - [ ] Confirm submission deadline and ruleset version (e.g. `6.1.0`)
 - [ ] Confirm any benchmark-specific rule changes that carry into the new round
 
----
-
-### 2. [mlcommons/training](https://github.com/mlcommons/training) — reference implementations
+### [mlcommons/training](https://github.com/mlcommons/training) — reference implementations
 
 - [ ] Move retired benchmark folders under [`retired_benchmarks/`](https://github.com/mlcommons/training/tree/master/retired_benchmarks)
 - [ ] Add a new round section to [README.md](https://github.com/mlcommons/training/blob/master/README.md) with:
   - [ ] Submission deadline
   - [ ] Benchmark table (model, reference path, framework, dataset, parameter count)
   - [ ] Links to each active reference implementation
-- [ ] For **new** benchmarks: merge reference code and follow the [New Benchmark](new_benchmark.md) checklist (dataset upload, RCP logs, README, etc.)
+- [ ] For **new** benchmarks: merge reference code and follow the New Benchmark checklist (dataset upload, RCP logs, README, etc.)
 - [ ] For **carrying-forward** benchmarks: confirm reference code still matches the closed-division rules for the new round
 
----
-
-### 3. [mlcommons/training_policies](https://github.com/mlcommons/training_policies) — rules document
+### [mlcommons/training_policies](https://github.com/mlcommons/training_policies) — rules document
 
 Update [training_rules.adoc](https://github.com/mlcommons/training_policies/blob/master/training_rules.adoc):
 
@@ -58,9 +52,7 @@ Update [training_rules.adoc](https://github.com/mlcommons/training_policies/blob
   - [ ] Move rules to [Appendix: Deprecated benchmarks](https://github.com/mlcommons/training_policies/blob/master/training_rules.adoc#appendix-deprecated-benchmarks)
   - [ ] Add a `v[X.Y]` appendix section if the round introduced round-specific exceptions (see [v6.0 Specific Rules](https://github.com/mlcommons/training_policies/blob/master/training_rules.adoc#appendix-v60-specific-rules) for an example)
 
----
-
-### 4. [mlcommons/logging](https://github.com/mlcommons/logging) — checkers & summarizer
+### [mlcommons/logging](https://github.com/mlcommons/logging) — checkers & summarizer
 
 - [ ] Add `training_[X.Y].0/` compliance-checker configs under [`mlperf_logging/compliance_checker/`](https://github.com/mlcommons/logging/tree/master/mlperf_logging/compliance_checker)
   - [ ] Copy forward `common.yaml` and per-benchmark closed/open YAMLs from the prior round; update for retired/new benchmarks
@@ -72,23 +64,15 @@ Update [training_rules.adoc](https://github.com/mlcommons/training_policies/blob
 - [ ] Update [`mlperf_logging/result_summarizer/config.yaml`](https://github.com/mlcommons/logging/blob/master/mlperf_logging/result_summarizer/config.yaml) with the new ruleset column/benchmark list
 - [ ] Tag a new logging release once changes are merged (submitters pin to this tag)
 
----
-
-### 5. [mlcommons/policies](https://github.com/mlcommons/policies) — compatibility table
+### [mlcommons/policies](https://github.com/mlcommons/policies) — compatibility table
 
 Update [MLPerf_Compatibility_Table.adoc](https://github.com/mlcommons/policies/blob/master/MLPerf_Compatibility_Table.adoc#training):
 
 - [ ] Add a column for Training v[X.Y]
 - [ ] Mark supported benchmarks for the new round
-- [ ] Mark all retired benchmarks as unsupported in the new column 
+- [ ] Mark all retired benchmarks as unsupported in the new column
 
----
-
-
-
----
-
-### 6. Website & communications
+### Website & communications
 
 Email [marketing@mlcommons.org](mailto:marketing@mlcommons.org) and ask them to update the [Training benchmarks page](https://mlcommons.org/benchmarks/training/):
 
