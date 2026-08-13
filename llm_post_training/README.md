@@ -722,3 +722,11 @@ substantially more expensive than a conventional forward-only validation
 pass. The schedule delays the first evaluation to the GBS-specific RCP
 convergence window, then evaluates every step so a later crossing is detected
 within one additional training step.
+
+# 6. Approximate runtime
+
+The reference results were produced on NVIDIA GB300 NVL72 racks, using 64
+compute nodes with 4 Blackwell Ultra GPUs each (256 GPUs total) and BF16 policy
+training. Across the GBS 256, 512, and 1024 reference configurations, the mean
+MLLog time from `run_start` to successful `run_stop` ranged from approximately
+140 to 160 minutes.
