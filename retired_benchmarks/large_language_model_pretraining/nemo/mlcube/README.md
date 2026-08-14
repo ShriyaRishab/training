@@ -31,7 +31,7 @@ The base Docker image requires the host machine to have the NVIDIA driver versio
 
 Install Rclone in your system, by following [these instructions](https://rclone.org/install/).
 
-MLCommons hosts the model for download exclusively by MLCommons Members. You must first agree to the [confidentiality notice](https://sites.google.com/view/mlcommons-llama3-1). If you cannot access the form, follow these [intructions](https://github.com/mlcommons/training/tree/master/large_language_model_pretraining/nemo#checkpoint-download).
+MLCommons hosts the model for download exclusively by MLCommons Members. You must first agree to the [confidentiality notice](https://sites.google.com/view/mlcommons-llama3-1). If you cannot access the form, follow these [intructions](https://github.com/mlcommons/training/tree/master/retired_benchmarks/large_language_model_pretraining/nemo#checkpoint-download).
 
 When finishing the previous form, you will receive an email with access to the Drive folder containing a file called `Llama 3.1 CLI Download Instructions`, follow the instructions inside that file up to step: `3. Authenticate Rclone with Google Drive`.
 
